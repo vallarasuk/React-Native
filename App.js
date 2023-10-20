@@ -5,6 +5,8 @@ import Main from "./content/Main";
 // import PortfolioCard from "./components/ProfileCard";
 // import ProfileInfo from "./lib/ProfileInfo";
 import ProfileCard from "./components/ProfileCard";
+import ContentSection from "./components/ContentSection";
+import FooterContent from "./components/FooterContent";
 
 const Navigation = () => {
   const colorScheme = useColorScheme();
@@ -21,6 +23,8 @@ const Navigation = () => {
         /> */}
         {/* <ProfileInfo /> */}
         <ProfileCard />
+        <ContentSection/>
+        <FooterContent/>
         {/* <Main /> */}
       </ScrollView>
     </SafeAreaView>

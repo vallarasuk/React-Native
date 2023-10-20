@@ -3,7 +3,10 @@ import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
 import { useSpring, animated } from "react-spring";
 import HomeContent from "../constants/HomePageData";
 import ProfileImages from "../lib/ProfileImage.jsx";
-import ProfileInfo from "../lib/ProfileInfo"
+import ProfileInfo from "../lib/ProfileInfo";
+import SocialLinks from "../lib/SocialLinks";
+import Resume from "../lib/Resume";
+
 
 const ProfileCard = () => {
   // const [isLoading, setIsLoading] = useState(true);
@@ -16,8 +19,10 @@ const ProfileCard = () => {
     email,
     emailTo,
     resumeDownloadLink,
+    resumeFileName
   } = HomeContent;
 
+  console.log(    resumeDownloadLink    )
   // useEffect(() => {
   //   setTimeout(() => {
   //     setIsLoading(false);
@@ -40,15 +45,14 @@ const ProfileCard = () => {
       <ProfileImages imageSrc={cardImage} alt={name} />
 
       <ProfileInfo name={name} role={role} email={email} />
-
       {/* Use the SocialLinks component */}
-      {/* <SocialLinks
+      <SocialLinks
             linkedInProfileLink={linkedInProfileLink}
             githubProfileLink={githubProfileLink}
             emailTo={emailTo}
-          /> */}
+          />
       {/* Resume Download */}
-      {/* <Resume resumeDownloadLink={resumeDownloadLink} /> */}
+      <Resume resumeDownloadLink={resumeDownloadLink} resumeFileName ={resumeFileName} />
       {/* )} */}
     </View>
   );

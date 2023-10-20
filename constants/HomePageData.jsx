@@ -3,7 +3,7 @@ const HomePageData = {
   titleIcon: "https://us.123rf.com/450wm/berkut2011/berkut20111309/berkut2011130900093/21991120-abstract-icon-based-on-the-letter.jpg?ver=6",
   cardImage:  "../Assects/profileimgone.jpg",
   MobileProfileImage: "../Assects/profileimgtwo.JPG",
-  resumeDownloadLink: require("../Assects/VALLARASU K.png"),
+  resumeDownloadLink: "../Assects/demo.pdf",
   resumeFileName: "Vallarasu K",
   name: "Vallarasu Kanthasamy",
   role: "React Front End Developer",
@@ -28,29 +28,76 @@ const HomePageData = {
   projectButtonlink: "/projects",
   skillsTitle: "Skills and Expertise",
   skills: [
-    { name: "React Native", icon: "react-native-icon" }, // Replace 'react-native-icon' with the actual icon source
-    { name: "JavaScript", icon: "javascript-icon" }, // Replace 'javascript-icon' with the actual icon source
-    { name: "HTML", icon: "html-icon" }, // Replace 'html-icon' with the actual icon source
-    { name: "CSS", icon: "css-icon" }, // Replace 'css-icon' with the actual icon source
-    { name: "Responsive Design", icon: "responsive-icon" }, // Replace 'responsive-icon' with the actual icon source
-    // Add more skills as needed
+    { name: "React Native", icon: "react-native-icon" },
+    { name: "JavaScript", icon: "javascript-icon" },
+    { name: "HTML", icon: "html-icon" },
+    { name: "CSS", icon: "css-icon" },
+    { name: "Responsive Design", icon: "responsive-icon" },
   ],
   projectsData: [
     {
-      title: "Your Project Title 1",
+      title: "Otto Clone",
       description: "Description for Project 1",
-      gitLink: "https://github.com/yourusername/your-project-repo-1",
-      livePreview: "https://yourprojecturl.com/project-1",
-    //   previewImage: require("../Assects/project1.png"),
+      gitLink: "https://github.com/vallarasuk/otto-landing-page",
+      livePreview: "https://vallarasuk.github.io/otto-landing-page/",
+      // previewImage: require("../Assects/otto landing.png"),
     },
     {
-      title: "Your Project Title 2",
+      title: "Macro Touch Clone",
       description: "Description for Project 2",
-      gitLink: "https://github.com/yourusername/your-project-repo-2",
-      livePreview: "https://yourprojecturl.com/project-2",
-    //   previewImage: require("../Assects/project2.png"),
+      gitLink: "https://github.com/vallarasuk/Macro-Touch",
+      livePreview: "https://vallarasuk.github.io/Macro-Touch/",
+      // previewImage: require("../Assects/macroTouch.png"),
     },
-    // Add more project entries
+    {
+      title: "About Internet Blog",
+      description: "Description for Project 3",
+      gitLink: "https://github.com/vallarasuk/Front-End-Blog",
+      livePreview: "https://vallarasuk.github.io/Front-End-Blog/",
+      // previewImage: require("../Assects/about internet blog.png"),
+    },
+    {
+      title: "Portfolio",
+      description: "Description for Project 4",
+      // gitLink: "https://vallarasuk.github.io/otto-landing-page/",
+      livePreview: "https://vallarasuk.w3spaces.com/",
+      // previewImage: require("../Assects/portfolio 2.png"),
+    },
+    {
+        title: "Nexsens CB 250",
+        description: "Description for Project 5",
+        // gitLink: "https://github.com/vallarasuk/Vote-Check",
+        livePreview: "https://www.nexsens.com/products/data-buoys/cb-250",
+        // previewImage: require("../Assects/cb 250 page.png"),
+      },
+      {
+        title: "X2 Environmental",
+        description: "Description for Project 6",
+        // gitLink: "https://github.com/vallarasuk/Vote-Check",
+        livePreview: "https://www.nexsens.com/products/data-loggers/x2-environmental-data-logger",
+        // previewImage: require("../Assects/Nexsens X2 page.png"),
+      },
+      {
+        title: "Nexsens Contact Us",
+        description: "Description for Project 7",
+        // gitLink: "https://github.com/vallarasuk/Vote-Check",
+        livePreview: "https://www.nexsens.com/support/contact-us",
+        // previewImage: require("../Assects/Nexsens Contact us page.png"),
+      },
+      {
+        title: "Nexsens YSI",
+        description: "Description for Project 8",
+        // gitLink: "https://github.com/vallarasuk/Vote-Check",
+        livePreview: "https://www.nexsens.com/products/sensors/water-quality/ysi-exo3-multi-parameter-water-quality-sonde",
+        // previewImage: require("../Assects/YSI page.png"),
+      },
+    // {
+    //   title: "Vote Validate Check",
+    //   description: "Description for Project 5",
+    //   gitLink: "https://github.com/vallarasuk/Vote-Check",
+    //   livePreview: "https://vallarasuk.github.io/Vote-Check/",
+    //   previewImage: require("../Assects/vote eligible check.png"),
+    // },
   ],
   studies: [
     {

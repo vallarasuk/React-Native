@@ -1,50 +1,48 @@
 import React from "react";
-import { View, Linking, StyleSheet } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome"; // You can choose the icon set you prefer
+import { View, Linking, StyleSheet, TouchableOpacity } from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome";
+
+const SocialLink = ({ name, link }) => {
+  const handlePress = () => {
+    Linking.openURL(link);
+  };
+
+  return (
+    <TouchableOpacity
+      style={styles.socialLink}
+      onPress={handlePress}
+      accessibilityLabel={`Open ${name}`}
+    >
+      <Icon name={name} size={40} color="black" />
+    </TouchableOpacity>
+  );
+};
 
 const SocialLinks = ({ linkedInProfileLink, githubProfileLink, emailTo }) => {
   return (
     <View style={styles.socialLinksContainer}>
-      <View style={styles.row}>
-        <View style={styles.column}>
-          <Icon
-            name="linkedin"
-            size={30}
-            color="blue"
-            onPress={() => Linking.openURL(linkedInProfileLink)}
-          />
-        </View>
-        <View style={styles.column}>
-          <Icon
-            name="github"
-            size={30}
-            color="black"
-            onPress={() => Linking.openURL(githubProfileLink)}
-          />
-        </View>
-        <View style={styles.column}>
-          <Icon
-            name="envelope"
-            size={30}
-            color="black"
-            onPress={() => Linking.openURL(`mailto:${emailTo}`)}
-          />
-        </View>
-      </View>
+      <SocialLink name="linkedin" link={linkedInProfileLink} />
+      <SocialLink name="github" link={githubProfileLink} />
+      <SocialLink name="envelope" link={`mailto:${emailTo}`} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   socialLinksContainer: {
-    marginTop: 20,
-  },
-  row: {
+    marginTop: 25,
     flexDirection: "row",
+    justifyContent: "center",
   },
-  column: {
-    flex: 1,
+  socialLink: {
     alignItems: "center",
+    justifyContent: "center",
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    backgroundColor: "lightgray",
+    marginHorizontal: 10,
+   
   },
 });
 

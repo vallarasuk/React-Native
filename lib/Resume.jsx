@@ -1,37 +1,28 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
+import { View, Text, TouchableOpacity, StyleSheet, Linking } from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome";
 
-const Resume = ({ resumeDownloadLink, resumeFileName }) => {
-  const handleResumeDownload = () => {
-    const currentDate = new Date();
-    const formattedDate = currentDate.toISOString().split("T")[0]; // Format: YYYY-MM-DD
 
-    // Create an anchor element
-    const link = document.createElement("a");
-    link.href = resumeDownloadLink;
-    link.target = "_blank"; // Open in a new tab/window
-    link.download = `${resumeFileName}_${formattedDate}.png`; // Include resumeFileName and today's date in the file name
+const Resume = ({ resumeDownloadLink }) => {
+  const handleResumeDownload = async () => {
+    try {
+      const supported = await Linking.canOpenURL(resumeDownloadLink);
 
-    // Add the anchor element to the DOM
-    document.body.appendChild(link);
-
-    // Dispatch a click event on the anchor
-    link.dispatchEvent(new MouseEvent("click"));
-
-    // Clean up: Remove the anchor element from the DOM after the click event is dispatched
-    document.body.removeChild(link);
+      if (supported) {
+        await Linking.openURL(resumeDownloadLink);
+      } else {
+        console.error(`Unable to open URL: ${resumeDownloadLink}`);
+      }
+    } catch (error) {
+      console.error("Error opening URL: ", error);
+    }
   };
 
   return (
     <View style={styles.resumeContainer}>
-      <TouchableOpacity
-        onPress={handleResumeDownload}
-        style={styles.resumeButton}
-      >
-        <FontAwesomeIcon size={24} icon={faFileDownload} />
-        <Text style={styles.resumeButtonText}>RESUME</Text>
+      <TouchableOpacity onPress={handleResumeDownload} style={styles.resumeButton}>
+        <Icon name="file-pdf-o" size={24} color="white" />
+        <Text style={styles.resumeButtonText}>Resume</Text>
       </TouchableOpacity>
     </View>
   );
@@ -40,18 +31,19 @@ const Resume = ({ resumeDownloadLink, resumeFileName }) => {
 const styles = StyleSheet.create({
   resumeContainer: {
     alignItems: "center",
-    marginTop: 10,
+    marginTop: 25,
   },
   resumeButton: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#0077b6",
-    padding: 12,
+    backgroundColor: "#0077b6", // You can adjust the background color
+    paddingHorizontal: 25,
+    paddingVertical: 20,
     borderRadius: 30,
   },
   resumeButtonText: {
     color: "white",
-    marginLeft: 10,
+    marginHorizontal: 10,
     fontWeight: "bold",
   },
 });
