@@ -2,7 +2,9 @@ import React from "react";
 import { SafeAreaView, ScrollView, View, Text, StyleSheet } from "react-native";
 import { useColorScheme } from "react-native";
 import Main from "./content/Main";
-import PortfolioCard from "./components/ProfileCard";
+// import PortfolioCard from "./components/ProfileCard";
+// import ProfileInfo from "./lib/ProfileInfo";
+import ProfileCard from "./components/ProfileCard";
 
 const Navigation = () => {
   const colorScheme = useColorScheme();
@@ -17,21 +19,9 @@ const Navigation = () => {
           previewLink="https://vallarasuk.github.io/otto-landing-page/"
           githubLink="https://github.com/vallarasuk/otto-landing-page"
         /> */}
-        <Main />
-        <Main />
-        <Main />
-        <Main />
-        <Main />
-        <Main />
-        <Main />
-        <Main />
-        <Main />
-        <Main />
-        <Main />
-        <Main />
-        <Main />
-        <Main />
-        <Main />
+        {/* <ProfileInfo /> */}
+        <ProfileCard />
+        {/* <Main /> */}
       </ScrollView>
     </SafeAreaView>
   );

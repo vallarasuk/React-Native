@@ -1,28 +1,35 @@
 import React from "react";
 import { Image, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text } from "../components/Themed";
 
 const ProfileImage = ({ imageSrc, alt }) => {
   return (
-    <TouchableOpacity
-      onPress={() => {
-        // Navigate to the "about" screen when the image is pressed
-        // You'll need to implement navigation using React Navigation or a similar library
-      }}
-      style={styles.profileImageLink}
-    >
-      <Image source={{ uri: imageSrc }} alt={alt} style={styles.profileImage} />
-    </TouchableOpacity>
+    <View>
+      <TouchableOpacity
+        onPress={() => {
+          // Navigate to the "about" screen when the image is pressed
+          // You'll need to implement navigation using React Navigation or a similar library
+        }}
+        style={styles.profileImageLink}
+      >
+        <Image
+          source={require("../Assects/profileimgone.jpg")} // Use require with the correct path
+          style={styles.profileImage}
+        />
+      </TouchableOpacity>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   profileImageLink: {
-    // Add any styles you want for the link container
+    alignItems: "center",
   },
+
   profileImage: {
-    width: 100, // Adjust the width and height as needed
-    height: 100,
-    // Add any other styles you want for the profile image
+    width: 150,
+    height: 150,
+    borderRadius: 100,
   },
 });
 
