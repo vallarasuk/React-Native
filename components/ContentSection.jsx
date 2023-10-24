@@ -1,12 +1,13 @@
-import React from 'react';
-import {  ScrollView, StyleSheet } from 'react-native';
-import HomePageData from '../constants/HomePageData';
+import React from "react";
+import { ScrollView, StyleSheet } from "react-native";
+import HomePageData from "../constants/HomePageData";
 // import MobileProfileCard from './Lib/MobileProfileCard';
 
-import { Text, View } from './Themed';
-import MyWorks from '../lib/MyWorks';
-import SkillsSection from '../lib/SkillsSection';
-import Home from '../lib/Home';
+import { Text, View } from "./Themed";
+import MyWorks from "../lib/MyWorks";
+import SkillsSection from "../lib/SkillsSection";
+import Home from "../lib/Home";
+import Card from "../lib/Cards";
 
 const ContentSection = () => {
   const {
@@ -34,16 +35,19 @@ const ContentSection = () => {
     studies,
     aboutTitle,
     aboutDescription,
+    cardValues
   } = HomePageData; // Assuming HomePageData is imported here
 
   return (
     <View style={styles.container}>
       {/* Mobile Profile Card Section */}
       {/* <MobileProfileCard /> */}
-
-     <View>
-     <Home/>
-     </View>
+      <View>
+        <Card cardValues={cardValues} />
+      </View>
+      <View>
+        <Home />
+      </View>
 
       {/* About Section */}
       {/* <View style={styles.about}>
@@ -68,7 +72,7 @@ const ContentSection = () => {
           ))}
         </View>
       </View> */}
-      <SkillsSection/>
+      <SkillsSection />
 
       {/* Studies Section */}
       <View style={styles.studies}>
@@ -95,7 +99,7 @@ const styles = StyleSheet.create({
   },
   aboutTitle: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 8,
   },
   aboutDescription: {
@@ -103,26 +107,26 @@ const styles = StyleSheet.create({
   },
   works: {
     fontSize: 24,
-    fontWeight: 'bold',
-    color: '#0077b6',
+    fontWeight: "bold",
+    color: "#0077b6",
     marginBottom: 10,
   },
-  
+
   skills: {
     // margin: 16,
   },
   skillsTitle: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 8,
   },
   skillsRow: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexDirection: "row",
+    flexWrap: "wrap",
   },
   skillContainer: {
-    flexDirection: 'column',
-    alignItems: 'center',
+    flexDirection: "column",
+    alignItems: "center",
     margin: 8,
   },
   skillIcon: {
@@ -137,8 +141,8 @@ const styles = StyleSheet.create({
   },
   studiesTitle: {
     fontSize: 24,
-    fontWeight: 'bold',
-    color: '#0077b6',
+    fontWeight: "bold",
+    color: "#0077b6",
     marginBottom: 10,
   },
   study: {
@@ -146,7 +150,7 @@ const styles = StyleSheet.create({
   },
   studyTitle: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   studyYear: {
     fontSize: 16,

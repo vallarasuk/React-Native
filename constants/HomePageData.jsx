@@ -1,12 +1,14 @@
 const HomePageData = {
   iconImage: "../Assects/Profile.jpg",
-  titleIcon: "https://us.123rf.com/450wm/berkut2011/berkut20111309/berkut2011130900093/21991120-abstract-icon-based-on-the-letter.jpg?ver=6",
-  cardImage:  "../Assects/profileimgone.jpg",
+  titleIcon:
+    "https://us.123rf.com/450wm/berkut2011/berkut20111309/berkut2011130900093/21991120-abstract-icon-based-on-the-letter.jpg?ver=6",
+  cardImage: "../Assects/profileimgone.jpg",
   MobileProfileImage: "../Assects/profileimgtwo.JPG",
   resumeDownloadLink: "../Assects/demo.pdf",
   resumeFileName: "Vallarasu K",
   name: "Vallarasu Kanthasamy",
   role: "React Front End Developer",
+  roles: ["React Front Developer", "Wordpress Developer", "React Native Developer"],
   email: "vallarasuk143@gmail.com",
   emailTo: "mailto:vallarasuk143@gmail.com",
   mobile: "8122992143",
@@ -34,6 +36,18 @@ const HomePageData = {
     { name: "CSS", icon: "css-icon" },
     { name: "Responsive Design", icon: "responsive-icon" },
   ],
+
+  cardValues:[{
+    title:"React",
+    description:"Hello react"
+  },
+  {
+    title:"react nativee",
+    description:"Hello native"
+  },{
+    title:"wordpress",
+    description:"Hello wordpress"
+  }],
   projectsData: [
     {
       title: "Otto Clone",
@@ -64,33 +78,35 @@ const HomePageData = {
       // previewImage: require("../Assects/portfolio 2.png"),
     },
     {
-        title: "Nexsens CB 250",
-        description: "Description for Project 5",
-        // gitLink: "https://github.com/vallarasuk/Vote-Check",
-        livePreview: "https://www.nexsens.com/products/data-buoys/cb-250",
-        // previewImage: require("../Assects/cb 250 page.png"),
-      },
-      {
-        title: "X2 Environmental",
-        description: "Description for Project 6",
-        // gitLink: "https://github.com/vallarasuk/Vote-Check",
-        livePreview: "https://www.nexsens.com/products/data-loggers/x2-environmental-data-logger",
-        // previewImage: require("../Assects/Nexsens X2 page.png"),
-      },
-      {
-        title: "Nexsens Contact Us",
-        description: "Description for Project 7",
-        // gitLink: "https://github.com/vallarasuk/Vote-Check",
-        livePreview: "https://www.nexsens.com/support/contact-us",
-        // previewImage: require("../Assects/Nexsens Contact us page.png"),
-      },
-      {
-        title: "Nexsens YSI",
-        description: "Description for Project 8",
-        // gitLink: "https://github.com/vallarasuk/Vote-Check",
-        livePreview: "https://www.nexsens.com/products/sensors/water-quality/ysi-exo3-multi-parameter-water-quality-sonde",
-        // previewImage: require("../Assects/YSI page.png"),
-      },
+      title: "Nexsens CB 250",
+      description: "Description for Project 5",
+      // gitLink: "https://github.com/vallarasuk/Vote-Check",
+      livePreview: "https://www.nexsens.com/products/data-buoys/cb-250",
+      // previewImage: require("../Assects/cb 250 page.png"),
+    },
+    {
+      title: "X2 Environmental",
+      description: "Description for Project 6",
+      // gitLink: "https://github.com/vallarasuk/Vote-Check",
+      livePreview:
+        "https://www.nexsens.com/products/data-loggers/x2-environmental-data-logger",
+      // previewImage: require("../Assects/Nexsens X2 page.png"),
+    },
+    {
+      title: "Nexsens Contact Us",
+      description: "Description for Project 7",
+      // gitLink: "https://github.com/vallarasuk/Vote-Check",
+      livePreview: "https://www.nexsens.com/support/contact-us",
+      // previewImage: require("../Assects/Nexsens Contact us page.png"),
+    },
+    {
+      title: "Nexsens YSI",
+      description: "Description for Project 8",
+      // gitLink: "https://github.com/vallarasuk/Vote-Check",
+      livePreview:
+        "https://www.nexsens.com/products/sensors/water-quality/ysi-exo3-multi-parameter-water-quality-sonde",
+      // previewImage: require("../Assects/YSI page.png"),
+    },
     // {
     //   title: "Vote Validate Check",
     //   description: "Description for Project 5",

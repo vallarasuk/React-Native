@@ -1,16 +1,29 @@
-import React from "react";
-import { View, Text, Linking, StyleSheet } from "react-native";
+import React, { useState, useEffect } from "react";
+import { StyleSheet } from "react-native";
+import MarqueeText from "react-native-marquee";
+import { Text, View } from "../components/Themed";
 
-const ProfileInfo = ({ name, role, email }) => {
+const ProfileInfo = ({ name, email, roles }) => {
+  // Replace with your roles
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+
+  useEffect(() => {
+    const roleChangeInterval = setInterval(() => {
+      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+    }, 3000); // Change role every 3 seconds (adjust as needed)
+
+    return () => {
+      clearInterval(roleChangeInterval);
+    };
+  }, []);
+
   return (
     <View style={styles.profileInfo}>
       <Text style={styles.name}>{name}</Text>
-      <Text style={styles.role}>{role}</Text>
-      <Text
-        style={styles.email}
-        onPress={() => Linking.openURL(`mailto:${email}`)}
-      >
-        {email}
+      <Text>
+        <MarqueeText style={styles.role} duration={1000}>
+          {roles[currentRoleIndex]}
+        </MarqueeText>
       </Text>
     </View>
   );
@@ -22,7 +35,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   name: {
-    // fontFamily: "Caveat", // Use the correct font family name
     fontSize: 24,
     fontWeight: "bold",
     marginTop: 20,

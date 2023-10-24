@@ -4,7 +4,7 @@ import { View, Text } from "../components/Themed";
 
 const ProfileImage = ({ imageSrc, alt }) => {
   return (
-    <View>
+    <View style={styles.profileImageContainer}>
       <TouchableOpacity
         onPress={() => {
           // Navigate to the "about" screen when the image is pressed
@@ -22,14 +22,16 @@ const ProfileImage = ({ imageSrc, alt }) => {
 };
 
 const styles = StyleSheet.create({
-  profileImageLink: {
+  profileImageContainer: {
     alignItems: "center",
   },
-
+  profileImageLink: {
+    overflow: "hidden", // Clip the image to the defined shape
+    borderRadius: 115 , // Half of the width/height to make it a circle
+  },
   profileImage: {
-    width: 150,
-    height: 150,
-    borderRadius: 100,
+    width: 230,
+    height: 230,
   },
 });
 

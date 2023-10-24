@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
-import { useSpring, animated } from "react-spring";
+import React from "react";
+import {  StyleSheet } from "react-native";
 import HomeContent from "../constants/HomePageData";
 import ProfileImages from "../lib/ProfileImage.jsx";
 import ProfileInfo from "../lib/ProfileInfo";
 import SocialLinks from "../lib/SocialLinks";
 import Resume from "../lib/Resume";
+import { View } from "./Themed"; 
 
 
 const ProfileCard = () => {
@@ -13,13 +13,14 @@ const ProfileCard = () => {
   const {
     cardImage,
     name,
-    role,
+    roles,
     linkedInProfileLink,
     githubProfileLink,
     email,
     emailTo,
     resumeDownloadLink,
-    resumeFileName
+    resumeFileName,
+    
   } = HomeContent;
 
   console.log(    resumeDownloadLink    )
@@ -44,7 +45,7 @@ const ProfileCard = () => {
       {/* {!isLoading && ( */}
       <ProfileImages imageSrc={cardImage} alt={name} />
 
-      <ProfileInfo name={name} role={role} email={email} />
+      <ProfileInfo name={name} roles={roles} email={email} />
       {/* Use the SocialLinks component */}
       <SocialLinks
             linkedInProfileLink={linkedInProfileLink}
@@ -61,7 +62,7 @@ const ProfileCard = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    margin: 20,
+    margin: 0,
     padding: 20,
   },
 });

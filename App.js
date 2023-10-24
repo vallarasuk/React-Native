@@ -23,13 +23,14 @@ const Navigation = () => {
         /> */}
         {/* <ProfileInfo /> */}
         <ProfileCard />
-        <ContentSection/>
-        <FooterContent/>
+        
+        <ContentSection />
+        <FooterContent />
         {/* <Main /> */}
       </ScrollView>
     </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -40,7 +41,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 0,
     paddingVertical: 0,
   },
-
 });
 
 export default Navigation;
