@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "./Themed";
-import {  ActivityIndicator, StyleSheet } from "react-native";
+import { ActivityIndicator, StyleSheet } from "react-native";
 
 const Loader = () => {
   return (

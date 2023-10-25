@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Linking, StyleSheet, TouchableOpacity } from "react-native";
+import { Linking, StyleSheet, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
+import { View } from "../components/Themed";
 
 const SocialLink = ({ name, link }) => {
   const handlePress = () => {
@@ -42,7 +43,6 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     backgroundColor: "lightgray",
     marginHorizontal: 10,
-   
   },
 });
 

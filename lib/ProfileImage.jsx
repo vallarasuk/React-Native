@@ -27,11 +27,11 @@ const styles = StyleSheet.create({
   },
   profileImageLink: {
     overflow: "hidden", // Clip the image to the defined shape
-    borderRadius: 115 , // Half of the width/height to make it a circle
+    borderRadius: 115, // Half of the width/height to make it a circle
   },
   profileImage: {
-    width: 230,
-    height: 230,
+    width: 200,
+    height: 200,
   },
 });
 

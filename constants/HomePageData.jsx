@@ -8,7 +8,11 @@ const HomePageData = {
   resumeFileName: "Vallarasu K",
   name: "Vallarasu Kanthasamy",
   role: "React Front End Developer",
-  roles: ["React Front Developer", "Wordpress Developer", "React Native Developer"],
+  roles: [
+    "React Front Developer",
+    "Wordpress Developer",
+    "React Native Developer",
+  ],
   email: "vallarasuk143@gmail.com",
   emailTo: "mailto:vallarasuk143@gmail.com",
   mobile: "8122992143",
@@ -37,52 +41,55 @@ const HomePageData = {
     { name: "Responsive Design", icon: "responsive-icon" },
   ],
 
-  cardValues:[{
-    title:"React",
-    description:"Hello react"
-  },
-  {
-    title:"react nativee",
-    description:"Hello native"
-  },{
-    title:"wordpress",
-    description:"Hello wordpress"
-  }],
+  cardValues: [
+    {
+      title: "React Developer",
+      description: "Hello React",
+    },
+    {
+      title: "React Native Devleoper",
+      description: "Hello React Native",
+    },
+    {
+      title: "Wordpress Develoepr",
+      description: "Hello wordpress",
+    },
+  ],
   projectsData: [
     {
-      title: "Otto Clone",
+      title: "Otter",
       description: "Description for Project 1",
       gitLink: "https://github.com/vallarasuk/otto-landing-page",
       livePreview: "https://vallarasuk.github.io/otto-landing-page/",
-      // previewImage: require("../Assects/otto landing.png"),
+      previewImage: require("../Assects/otto.png"),
     },
     {
       title: "Macro Touch Clone",
       description: "Description for Project 2",
       gitLink: "https://github.com/vallarasuk/Macro-Touch",
       livePreview: "https://vallarasuk.github.io/Macro-Touch/",
-      // previewImage: require("../Assects/macroTouch.png"),
+      previewImage: require("../Assects/macroTouch.png"),
     },
     {
       title: "About Internet Blog",
       description: "Description for Project 3",
       gitLink: "https://github.com/vallarasuk/Front-End-Blog",
       livePreview: "https://vallarasuk.github.io/Front-End-Blog/",
-      // previewImage: require("../Assects/about internet blog.png"),
+      previewImage: require("../Assects/about-internet-blog.png"),
     },
     {
       title: "Portfolio",
       description: "Description for Project 4",
       // gitLink: "https://vallarasuk.github.io/otto-landing-page/",
       livePreview: "https://vallarasuk.w3spaces.com/",
-      // previewImage: require("../Assects/portfolio 2.png"),
+      previewImage: require("../Assects/portfolio-2.png"),
     },
     {
       title: "Nexsens CB 250",
       description: "Description for Project 5",
       // gitLink: "https://github.com/vallarasuk/Vote-Check",
       livePreview: "https://www.nexsens.com/products/data-buoys/cb-250",
-      // previewImage: require("../Assects/cb 250 page.png"),
+      previewImage: require("../Assects/cb-250-page.png"),
     },
     {
       title: "X2 Environmental",
@@ -90,14 +97,14 @@ const HomePageData = {
       // gitLink: "https://github.com/vallarasuk/Vote-Check",
       livePreview:
         "https://www.nexsens.com/products/data-loggers/x2-environmental-data-logger",
-      // previewImage: require("../Assects/Nexsens X2 page.png"),
+      previewImage: require("../Assects/Nexsens-X2-page.png"),
     },
     {
       title: "Nexsens Contact Us",
       description: "Description for Project 7",
       // gitLink: "https://github.com/vallarasuk/Vote-Check",
       livePreview: "https://www.nexsens.com/support/contact-us",
-      // previewImage: require("../Assects/Nexsens Contact us page.png"),
+      previewImage: require("../Assects/Nexsens-Contact.png"),
     },
     {
       title: "Nexsens YSI",
@@ -105,7 +112,7 @@ const HomePageData = {
       // gitLink: "https://github.com/vallarasuk/Vote-Check",
       livePreview:
         "https://www.nexsens.com/products/sensors/water-quality/ysi-exo3-multi-parameter-water-quality-sonde",
-      // previewImage: require("../Assects/YSI page.png"),
+      previewImage: require("../Assects/YSI-page.png"),
     },
     // {
     //   title: "Vote Validate Check",

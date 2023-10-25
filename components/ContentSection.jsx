@@ -35,7 +35,7 @@ const ContentSection = () => {
     studies,
     aboutTitle,
     aboutDescription,
-    cardValues
+    cardValues,
   } = HomePageData; // Assuming HomePageData is imported here
 
   return (

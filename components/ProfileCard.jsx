@@ -1,12 +1,11 @@
 import React from "react";
-import {  StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import HomeContent from "../constants/HomePageData";
 import ProfileImages from "../lib/ProfileImage.jsx";
 import ProfileInfo from "../lib/ProfileInfo";
 import SocialLinks from "../lib/SocialLinks";
 import Resume from "../lib/Resume";
-import { View } from "./Themed"; 
-
+import { View } from "./Themed";
 
 const ProfileCard = () => {
   // const [isLoading, setIsLoading] = useState(true);
@@ -20,10 +19,9 @@ const ProfileCard = () => {
     emailTo,
     resumeDownloadLink,
     resumeFileName,
-    
   } = HomeContent;
 
-  console.log(    resumeDownloadLink    )
+  console.log(resumeDownloadLink);
   // useEffect(() => {
   //   setTimeout(() => {
   //     setIsLoading(false);
@@ -48,12 +46,15 @@ const ProfileCard = () => {
       <ProfileInfo name={name} roles={roles} email={email} />
       {/* Use the SocialLinks component */}
       <SocialLinks
-            linkedInProfileLink={linkedInProfileLink}
-            githubProfileLink={githubProfileLink}
-            emailTo={emailTo}
-          />
+        linkedInProfileLink={linkedInProfileLink}
+        githubProfileLink={githubProfileLink}
+        emailTo={emailTo}
+      />
       {/* Resume Download */}
-      <Resume resumeDownloadLink={resumeDownloadLink} resumeFileName ={resumeFileName} />
+      <Resume
+        resumeDownloadLink={resumeDownloadLink}
+        resumeFileName={resumeFileName}
+      />
       {/* )} */}
     </View>
   );

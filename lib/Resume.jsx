@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet, Linking } from "react-native";
+import { TouchableOpacity, StyleSheet, Linking } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
-
+import { Text, View } from "../components/Themed";
 
 const Resume = ({ resumeDownloadLink }) => {
   const handleResumeDownload = async () => {
@@ -20,7 +20,10 @@ const Resume = ({ resumeDownloadLink }) => {
 
   return (
     <View style={styles.resumeContainer}>
-      <TouchableOpacity onPress={handleResumeDownload} style={styles.resumeButton}>
+      <TouchableOpacity
+        onPress={handleResumeDownload}
+        style={styles.resumeButton}
+      >
         <Icon name="file-pdf-o" size={24} color="white" />
         <Text style={styles.resumeButtonText}>Resume</Text>
       </TouchableOpacity>

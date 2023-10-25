@@ -1,7 +1,7 @@
-import React from 'react';
-import {  StyleSheet } from 'react-native';
-import { Text, View } from '../components/Themed';
-import ProjectCard from './ProjectCard';
+import React from "react";
+import { StyleSheet } from "react-native";
+import { Text, View } from "../components/Themed";
+import ProjectCard from "./ProjectCard";
 
 const MyWorks = ({ projectsData }) => {
   return (
@@ -30,16 +30,16 @@ const styles = StyleSheet.create({
   },
   worksTitle: {
     fontSize: 24,
-    fontWeight: 'bold',
-    color: '#0077b6',
+    fontWeight: "bold",
+    color: "#0077b6",
     marginBottom: 10,
   },
   workListTitle: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexDirection: "row",
+    flexWrap: "wrap",
   },
   projectCardContainer: {
-    width: '100%', // You can adjust the width as needed
+    width: "100%", // You can adjust the width as needed
     margin: 8,
   },
 });
