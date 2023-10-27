@@ -9,7 +9,7 @@ const skillsMapping = {
   "javascript-icon": "code",
   "html-icon": "html5",
   "css-icon": "css3",
-  "responsive-icon": "mobile-alt",
+  "responsive-icon": "mobile",
   // Add more mappings for additional skills
 };
 
@@ -37,7 +37,7 @@ const SkillsSection = () => {
 
 const styles = StyleSheet.create({
   skillsContainer: {
-    backgroundColor: "#f7f7f7",
+    // backgroundColor: "#f7f7f7",
     padding: 20,
     borderRadius: 10,
     marginVertical: 10,
@@ -47,6 +47,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#0077b6",
     marginBottom: 10,
+    backgroundColor:"white",
+    padding:20,
   },
   skillsList: {
     flexDirection: "row",

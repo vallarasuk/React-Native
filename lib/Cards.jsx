@@ -1,13 +1,19 @@
 import React from "react";
 import { StyleSheet, TouchableOpacity } from "react-native";
-import { Text, View } from "../components/Themed";
+import { Text, View, useThemeColor } from "../components/Themed";
+
 
 const Card = ({ cardValues }) => {
+  const cardBackgroundColor = useThemeColor(
+    { light: "#fff", dark: "black" }, // Replace "darkBackgroundColor" with your dark background color
+    "background"
+  );
+
   return (
     <View>
       {cardValues.map((card, index) => (
         <TouchableOpacity key={index} onPress={card.onPress}>
-          <View style={[styles.card]}>
+          <View style={[styles.card, { backgroundColor: cardBackgroundColor }]}>
             <Text style={styles.title}>{card.title}</Text>
             <Text style={styles.description}>{card.description}</Text>
           </View>
@@ -23,10 +29,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   card: {
-    backgroundColor: "#fff",
     borderRadius: 10,
     padding: 16,
-    margin: 10,
+    margin: 5, // Adjust margin as needed
     elevation: 3,
   },
   title: {

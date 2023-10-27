@@ -45,14 +45,17 @@ const HomePageData = {
     {
       title: "React Developer",
       description: "Hello React",
+      onpress: ""
     },
     {
       title: "React Native Devleoper",
       description: "Hello React Native",
+      onpress: ""
     },
     {
       title: "Wordpress Develoepr",
       description: "Hello wordpress",
+      onpress: ""
     },
   ],
   projectsData: [
