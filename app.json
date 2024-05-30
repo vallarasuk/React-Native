@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "Vallarasuk",
-    "slug": "expo-template-tabs",
-    "version": "1.0.0",
+    "slug": "myapp",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
     "scheme": "myapp",
@@ -15,7 +15,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -23,10 +25,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.vallarasu_kanthasamy.myapp"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f8713dd5-5e22-45ab-881b-9ab674d58ea2"
+      }
+    },
+    "owner": "vallarasu_kanthasamy"
   }
 }
