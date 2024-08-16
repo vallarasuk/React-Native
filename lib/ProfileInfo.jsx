@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet } from "react-native";
-import MarqueeText from "react-native-marquee";
+import TextTicker from "react-native-text-ticker"; // Import from react-native-text-ticker
 import { Text, View } from "../components/Themed";
 
 const ProfileInfo = ({ name, email, roles }) => {
@@ -20,11 +20,10 @@ const ProfileInfo = ({ name, email, roles }) => {
   return (
     <View style={styles.profileInfo}>
       <Text style={styles.name}>{name}</Text>
-      <Text>
-        <MarqueeText style={styles.role} duration={1000}>
-          {roles[currentRoleIndex]}
-        </MarqueeText>
-      </Text>
+      {/* Use TextTicker component instead of MarqueeText */}
+      <TextTicker style={styles.role} duration={3000} loop bounceRepeat={0}>
+        {roles[currentRoleIndex]}
+      </TextTicker>
     </View>
   );
 };
