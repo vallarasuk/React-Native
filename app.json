@@ -2,34 +2,33 @@
   "expo": {
     "name": "Vallarasuk",
     "slug": "myapp",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
-    "icon": "./assets/images/logo.png",
+    "icon": "./assets/images/profile.jpeg",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/profile.jpeg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vallarasu_kanthasamy.myapp"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/profile.jpeg",
         "backgroundColor": "#ffffff"
       },
       "package": "com.vallarasu_kanthasamy.myapp"
     },
     "web": {
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/profile.jpeg"
     },
     "extra": {
       "eas": {
@@ -38,5 +37,4 @@
     },
     "owner": "vallarasu_kanthasamy"
   }
-  
 }
