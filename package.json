@@ -49,7 +49,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
-  "name": "myapp"
+  "name": "Vallarasu_K portfolio app"
 }
