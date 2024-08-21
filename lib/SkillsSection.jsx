@@ -1,8 +1,16 @@
 import React from "react";
-import { StyleSheet } from "react-native";
-import { FontAwesome } from "@expo/vector-icons";
-import { Text, View } from "../components/Themed";
+import { StyleSheet, View, Text } from "react-native";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
 import HomePageData from "../constants/HomePageData"; // Adjust the path
+
+// Define colors for each icon
+const iconColors = {
+  "react-native-icon": "#61DAFB", // React Native color
+  "javascript-icon": "#F7DF1E",  // JavaScript color
+  "html-icon": "#E34F26",        // HTML5 color
+  "css-icon": "#1572B6",         // CSS3 color
+  "responsive-icon": "#61DAFB",  // Responsive design color (example, same as React Native for consistency)
+};
 
 const skillsMapping = {
   "react-native-icon": "mobile",
@@ -21,11 +29,11 @@ const SkillsSection = () => {
       <Text style={styles.skillsTitle}>{skillsTitle}</Text>
       <View style={styles.skillsList}>
         {skills.map((skill, index) => (
-          <View key={index} style={styles.skillItem}>
+          <View key={index} style={styles.skillCard}>
             <FontAwesome
               name={skillsMapping[skill.icon]}
-              size={55}
-              color="black"
+              size={35}
+              color={iconColors[skill.icon]} // Use specific color for each icon
             />
             <Text style={styles.skillName}>{skill.name}</Text>
           </View>
@@ -37,38 +45,44 @@ const SkillsSection = () => {
 
 const styles = StyleSheet.create({
   skillsContainer: {
-    // backgroundColor: "#f7f7f7",
     padding: 20,
     borderRadius: 10,
-    marginVertical: 10,
+    marginVertical: 20,
+    backgroundColor: "#f7f7f7",
+    elevation: 4, // For shadow effect on Android
   },
   skillsTitle: {
     fontSize: 24,
     fontWeight: "bold",
-    color: "#0077b6",
-    marginBottom: 10,
-    backgroundColor:"white",
-    padding:20,
+    color: "#0077b6", // Logo color or a consistent color for the title
+    marginBottom: 15,
+    textAlign: "center",
   },
   skillsList: {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
   },
-  skillItem: {
+  skillCard: {
     alignItems: "center",
-    width: "75%", // Adjust to your preference
-    marginVertical: 15,
+    justifyContent: "center", // Center items vertically
+    width: 160,
+    height: 85, 
+    margin: 10,
     padding: 10,
-    backgroundColor: "lightgray",
-    borderRadius: 100,
-    justifyContent: "center",
+    backgroundColor: "#ffffff",
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
+    elevation: 5, // For shadow effect on Android
   },
   skillName: {
-    fontSize: 16,
-    margin: 5,
+    fontSize: 14,
+    marginTop: 8,
     textAlign: "center",
-    color: "gray",
+    color: "#333",
   },
 });
 
