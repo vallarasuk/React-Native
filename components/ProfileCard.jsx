@@ -19,9 +19,9 @@ const ProfileCard = () => {
     emailTo,
     resumeDownloadLink,
     resumeFileName,
+    whatsappLink
   } = HomeContent;
 
-  console.log(resumeDownloadLink);
   // useEffect(() => {
   //   setTimeout(() => {
   //     setIsLoading(false);
@@ -49,6 +49,7 @@ const ProfileCard = () => {
         linkedInProfileLink={linkedInProfileLink}
         githubProfileLink={githubProfileLink}
         emailTo={emailTo}
+        whatsappLink={whatsappLink}
       />
       {/* Resume Download */}
       <Resume
