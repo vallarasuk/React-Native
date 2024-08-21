@@ -4,11 +4,11 @@
     "slug": "myapp",
     "version": "1.0.2",
     "orientation": "portrait",
-    "icon": "./assets/images/profile.jpeg",
+    "icon": "./assets/images/profile.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/profile.jpeg",
+      "image": "./assets/images/profile.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -18,17 +18,17 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.vallarasu_kanthasamy.myapp"
+      "bundleIdentifier": "com.vallarasukanthasamy.myapp"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/profile.jpeg",
+        "foregroundImage": "./assets/images/profile.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.vallarasu_kanthasamy.myapp"
     },
     "web": {
-      "favicon": "./assets/images/profile.jpeg"
+      "favicon": "./assets/images/profile.png"
     },
     "extra": {
       "eas": {
