@@ -8,6 +8,7 @@ import MyWorks from "../lib/MyWorks";
 import SkillsSection from "../lib/SkillsSection";
 import Home from "../lib/Home";
 import Card from "../lib/Cards";
+import EducationSection from "./EducationSection";
 
 const ContentSection = () => {
   const {
@@ -75,17 +76,7 @@ const ContentSection = () => {
       <SkillsSection />
 
       {/* Studies Section */}
-      <View style={styles.studies}>
-        <Text style={styles.studiesTitle}>Education</Text>
-        {studies.map((study, index) => (
-          <View key={index} style={styles.study}>
-            <Text style={styles.studyTitle}>{study.title}</Text>
-            <Text style={styles.studyYear}>{study.year}</Text>
-            <Text style={styles.studyInstitution}>{study.institution}</Text>
-            <Text style={styles.studyDescription}>{study.description}</Text>
-          </View>
-        ))}
-      </View>
+      <EducationSection studies={studies} />
     </View>
   );
 };

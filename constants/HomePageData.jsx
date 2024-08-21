@@ -4,7 +4,7 @@ const HomePageData = {
     "https://us.123rf.com/450wm/berkut2011/berkut20111309/berkut2011130900093/21991120-abstract-icon-based-on-the-letter.jpg?ver=6",
   cardImage: "../Assects/profileimgone.jpg",
   MobileProfileImage: "../Assects/profileimgtwo.JPG",
-  resumeDownloadLink: "../Assects/demo.pdf",
+  resumeDownloadLink: "../Assects/resume.pdf",
   resumeFileName: "Vallarasu K",
   name: "Vallarasu Kanthasamy",
   role: "React Front End Developer",
@@ -21,6 +21,7 @@ const HomePageData = {
   twitterProfileLink: "https://twitter.com/vallarasuk143",
   linkedInProfileLink: "https://www.linkedin.com/in/vallarasu-k/",
   githubProfileLink: "https://github.com/vallarasuk",
+  whatsappLink: "https://wa.me/+918122992143",
   title: "Dive into My World",
   description: [
     "Hello! I'm Vallarasu K, a dedicated Front End Developer with a passion for crafting captivating mobile app experiences using cutting-edge technologies.",
@@ -45,58 +46,58 @@ const HomePageData = {
     {
       title: "React Developer",
       description: "Hello React",
-      onpress: ""
+      onpress: "",
     },
     {
       title: "React Native Devleoper",
       description: "Hello React Native",
-      onpress: ""
+      onpress: "",
     },
     {
       title: "Wordpress Develoepr",
       description: "Hello wordpress",
-      onpress: ""
+      onpress: "",
     },
   ],
   projectsData: [
     {
       title: "Otter",
-      description: "Description for Project 1",
+      // description: "Description for Project 1",
       gitLink: "https://github.com/vallarasuk/otto-landing-page",
       livePreview: "https://vallarasuk.github.io/otto-landing-page/",
       previewImage: require("../Assects/otto.png"),
     },
     {
       title: "Macro Touch Clone",
-      description: "Description for Project 2",
+      // description: "Description for Project 2",
       gitLink: "https://github.com/vallarasuk/Macro-Touch",
       livePreview: "https://vallarasuk.github.io/Macro-Touch/",
       previewImage: require("../Assects/macroTouch.png"),
     },
     {
       title: "About Internet Blog",
-      description: "Description for Project 3",
+      // description: "Description for Project 3",
       gitLink: "https://github.com/vallarasuk/Front-End-Blog",
       livePreview: "https://vallarasuk.github.io/Front-End-Blog/",
       previewImage: require("../Assects/about-internet-blog.png"),
     },
     {
       title: "Portfolio",
-      description: "Description for Project 4",
+      // description: "Description for Project 4",
       // gitLink: "https://vallarasuk.github.io/otto-landing-page/",
       livePreview: "https://vallarasuk.w3spaces.com/",
       previewImage: require("../Assects/portfolio-2.png"),
     },
     {
       title: "Nexsens CB 250",
-      description: "Description for Project 5",
+      // description: "Description for Project 5",
       // gitLink: "https://github.com/vallarasuk/Vote-Check",
       livePreview: "https://www.nexsens.com/products/data-buoys/cb-250",
       previewImage: require("../Assects/cb-250-page.png"),
     },
     {
       title: "X2 Environmental",
-      description: "Description for Project 6",
+      // description: "Description for Project 6",
       // gitLink: "https://github.com/vallarasuk/Vote-Check",
       livePreview:
         "https://www.nexsens.com/products/data-loggers/x2-environmental-data-logger",
@@ -104,14 +105,14 @@ const HomePageData = {
     },
     {
       title: "Nexsens Contact Us",
-      description: "Description for Project 7",
+      // description: "Description for Project 7",
       // gitLink: "https://github.com/vallarasuk/Vote-Check",
       livePreview: "https://www.nexsens.com/support/contact-us",
       previewImage: require("../Assects/Nexsens-Contact.png"),
     },
     {
       title: "Nexsens YSI",
-      description: "Description for Project 8",
+      // description: "Description for Project 8",
       // gitLink: "https://github.com/vallarasuk/Vote-Check",
       livePreview:
         "https://www.nexsens.com/products/sensors/water-quality/ysi-exo3-multi-parameter-water-quality-sonde",
@@ -145,6 +146,8 @@ const HomePageData = {
   aboutTitle:
     "Hello, I'm Vallarasu K, a dedicated React developer driven by the art of crafting exceptional mobile app experiences. My passion lies in blending technical expertise with creativity to deliver high-quality front-end solutions.",
   aboutDescription: "Description of your journey and experience.",
+
+  footerContentText: "© 2023 vallarasu Kanthasamy. All rights reserved.",
 };
 
 export default HomePageData;
