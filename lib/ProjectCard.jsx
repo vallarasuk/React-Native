@@ -25,8 +25,8 @@ const ProjectCard = ({
         </SkeletonPlaceholder>
       )}
       {previewImage && <Image source={previewImage} style={styles.cardImage} />}
-      <View style={styles.cardBody}>
-        {description ? (
+      {/* <View style={styles.cardBody}>
+        {description && description ? (
           <Text style={styles.cardText}>{description}</Text>
         ) : (
           <SkeletonPlaceholder>
@@ -47,7 +47,7 @@ const ProjectCard = ({
             />
           </SkeletonPlaceholder>
         )}
-      </View>
+      </View> */}
       <View style={styles.cardFooter}>
         {gitLink && (
           <TouchableOpacity
@@ -104,8 +104,9 @@ const styles = StyleSheet.create({
   },
   cardFooter: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
     marginTop: 15,
+    backgroundColor:"#fff"
   },
   button: {
     paddingVertical: 10,

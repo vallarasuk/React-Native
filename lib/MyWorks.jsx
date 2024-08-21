@@ -12,7 +12,7 @@ const MyWorks = ({ projectsData }) => {
           <View key={index} style={styles.projectCardContainer}>
             <ProjectCard
               title={project.title}
-              description={project.description}
+              // description={project.description}
               gitLink={project.gitLink}
               livePreview={project.livePreview}
               previewImage={project.previewImage}
