@@ -3,11 +3,10 @@ import { TouchableOpacity, StyleSheet, Linking } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Text, View } from "../components/Themed";
 
-const Resume = ({ resumeDownloadLink }) => {
+const Resume = (resumeDownloadLink) => {
   const handleResumeDownload = async () => {
     try {
       const supported = await Linking.canOpenURL(resumeDownloadLink);
-
       if (supported) {
         await Linking.openURL(resumeDownloadLink);
       } else {
@@ -24,8 +23,8 @@ const Resume = ({ resumeDownloadLink }) => {
         onPress={handleResumeDownload}
         style={styles.resumeButton}
       >
-        <Icon name="file-pdf-o" size={24} color="white" />
-        <Text style={styles.resumeButtonText}>Resume</Text>
+        <Icon name="file-pdf-o" size={24} color="#ffffff" />
+        <Text style={styles.resumeButtonText}>Download Resume</Text>
       </TouchableOpacity>
     </View>
   );
@@ -39,15 +38,22 @@ const styles = StyleSheet.create({
   resumeButton: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#0077b6", // You can adjust the background color
-    paddingHorizontal: 25,
-    paddingVertical: 20,
-    borderRadius: 30,
+    backgroundColor: "#0077b6", // Main background color
+    paddingHorizontal: 20,
+    paddingVertical: 15,
+    borderRadius: 50,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
+    elevation: 5, // For shadow effect on Android
   },
   resumeButtonText: {
-    color: "white",
-    marginHorizontal: 10,
+    color: "#ffffff",
+    marginLeft: 10,
     fontWeight: "bold",
+    fontSize: 16,
+    letterSpacing: 1,
   },
 });
 
